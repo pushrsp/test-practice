@@ -4,9 +4,7 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.transaction.annotation.Transactional;
+import sample.firsttest.spring.IntegrationTestSupport;
 import sample.firsttest.spring.api.controller.order.request.OrderCreateRequest;
 import sample.firsttest.spring.api.service.order.response.OrderResponse;
 import sample.firsttest.spring.domain.order.OrderRepository;
@@ -23,9 +21,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
-@ActiveProfiles("test")
-@SpringBootTest
-class OrderServiceTest {
+class OrderServiceTest extends IntegrationTestSupport {
     @Autowired
     private OrderService orderService;
 
